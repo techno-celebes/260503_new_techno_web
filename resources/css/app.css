@@ -1,0 +1,80 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+    --color-primary: #7165ed;
+    --color-primary-light: #958cf9;
+    --color-primary-dark: #5b4cdb;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+@layer base {
+    body {
+        font-family: 'Montserrat', sans-serif;
+        background: #f8f9fa;
+        color: #333;
+    }
+    
+    .btn-primary {
+        @apply bg-[#7165ed] text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-[#5b4cdb] hover:shadow-lg;
+    }
+    
+    .card {
+        @apply bg-white rounded-xl shadow-md p-6 transition-all duration-300 hover:shadow-lg;
+    }
+    
+    .section-title {
+        @apply text-3xl font-bold text-[#333] mb-4;
+    }
+    
+    .text-primary {
+        @apply text-[#7165ed];
+    }
+    
+    .bg-primary {
+        @apply bg-[#7165ed];
+    }
+    
+    .gradient-bg {
+        background: linear-gradient(135deg, #7165ed 0%, #958cf9 100%);
+    }
+    
+    .hero-section {
+        background: linear-gradient(135deg, #7165ed 0%, #958cf9 100%);
+        min-height: 500px;
+    }
+    
+    .feature-card {
+        @apply bg-white rounded-xl p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg;
+    }
+    
+    .feature-icon {
+        @apply w-16 h-16 rounded-full bg-[rgba(113,99,237,0.15)] flex items-center justify-center mx-auto mb-4;
+    }
+    
+    .floating-btn {
+        @apply fixed bottom-6 z-50 flex items-center justify-center w-14 h-14 rounded-full text-white shadow-lg transition-all duration-300 hover:scale-110;
+    }
+    
+    .whatsapp-btn {
+        @apply bg-[#25D366] left-6 hover:bg-[#128C7E];
+    }
+    
+    .phone-btn {
+        @apply bg-[#7165ed] left-24 hover:bg-[#5b4cdb];
+    }
+    
+    .navbar {
+        @apply bg-white shadow-sm fixed w-full top-0 z-40;
+    }
+    
+    .footer-gradient {
+        background: linear-gradient(135deg, #7165ed 0%, #958cf9 100%);
+    }
+}
