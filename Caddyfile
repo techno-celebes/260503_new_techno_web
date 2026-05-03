@@ -1,16 +1,6 @@
 :80 {
-    # Root directory aplikasi
     root * /app/public
-    
-    # Compressi
     encode zstd br gzip
-    
-    # Proses file PHP
     php_server
-    
-    # Logging
-    log {
-        output stdout
-        level INFO
-    }
+    file_server
 }
