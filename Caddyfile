@@ -1,9 +1,16 @@
 :80 {
+    # Root directory aplikasi
     root * /app/public
-    encode gzip
-
+    
+    # Compressi
+    encode zstd br gzip
+    
+    # Proses file PHP
     php_server
-
-    try_files {path} {path}/ /index.php?{query}
-    file_server
+    
+    # Logging
+    log {
+        output stdout
+        level INFO
+    }
 }
